@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  &--center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.switch-wrapper {
+  height: calc(100% - $headerHeight);
+  position: relative;
+  width: 100%;
+}

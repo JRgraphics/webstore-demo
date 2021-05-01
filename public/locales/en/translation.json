@@ -1,0 +1,14 @@
+{
+  "catalogue": {
+    "descriptions": {
+      "circleDescription": "Perfect choice when you don't need any corners.",
+      "rectangleDescription": "For once, it's a grat idea to think inside the box.",
+      "triangleDescription": "a true classic with three elegant corners."
+    },
+    "names": {
+      "circle": "Circle",
+      "rectangle": "Rectangle",
+      "triangle": "Triangle"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.icon {
+  &__container {
+    &--shopping-cart {
+      background-color: $black;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+  }
+  &__home {
+    height: 40px;
+    width: 40px;
+  }
+  &__shopping-cart {
+    height: 70%;
+    width: 70%;
+  }
+}

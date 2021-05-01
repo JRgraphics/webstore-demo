@@ -1,0 +1,21 @@
+$bg: #fff;
+$width: 42px;
+.header {
+  align-items: flex-start;
+  background-color: $gray;
+  height: $headerHeight;
+  background-image:
+   /* Bottom jagged */ linear-gradient(
+      45deg,
+      $bg 50%,
+      transparent 50%
+    ),
+    linear-gradient(-45deg, $bg 50%, transparent 50%);
+  background-position:
+     /* Bottom jagged */ bottom left, bottom left;
+  background-size: $width $width;
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}

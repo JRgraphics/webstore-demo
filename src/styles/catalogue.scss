@@ -1,0 +1,9 @@
+.catalogue {
+  &__item {
+    align-items: center;
+    .item__image {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
