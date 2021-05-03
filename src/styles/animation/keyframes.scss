@@ -24,3 +24,24 @@
     transform: scale(1);
   }
 }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(25deg);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(-25deg);
+  }
+  80% {
+    transform: scale(25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

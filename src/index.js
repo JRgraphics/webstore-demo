@@ -1,6 +1,11 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 
+// Redux
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./store";
+
 // Styles
 import "./index.css";
 import "./index.scss";
@@ -14,11 +19,15 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<Loading />}>
-      <Div100vh>
-        <App />
-      </Div100vh>
-    </Suspense>
+    <Provider store={store}>
+      <Suspense fallback={<Loading />}>
+        <Div100vh>
+          <PersistGate persistor={persistor}>
+            <App />
+          </PersistGate>
+        </Div100vh>
+      </Suspense>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

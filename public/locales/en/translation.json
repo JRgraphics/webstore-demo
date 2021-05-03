@@ -10,5 +10,10 @@
       "rectangle": "Rectangle",
       "triangle": "Triangle"
     }
+  },
+  "header": { "title": "The most definitive shape store in the world" },
+  "titles": {
+    "home": "Catalogue",
+    "shoppingCart": "Shopping cart"
   }
 }

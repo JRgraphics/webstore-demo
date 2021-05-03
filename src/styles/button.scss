@@ -16,8 +16,25 @@ button {
 }
 
 .button {
+  padding: 0;
   &--transparent {
     background: transparent;
     border: none;
+  }
+  &__add-to-cart {
+    background-color: $white;
+    border: 2px solid $black;
+    font-weight: 600;
+    padding: 10px 20px;
+  }
+  &__number-toggle {
+    background-color: transparent;
+    border: 1px solid $black;
+    border-radius: 50%;
+    font-family: $fontTangerine;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 38px;
+    width: 38px;
   }
 }

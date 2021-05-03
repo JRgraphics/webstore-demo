@@ -1,15 +1,21 @@
 import React, { lazy } from "react";
 import { useSelector } from "react-redux";
+
+// Translation
+import { useTranslation } from "react-i18next";
+
 // Components
-const CatalogueList = lazy(() => import("../CatalogueList"));
+const List = lazy(() => import("../lists/List"));
 
 // Redux
 
 const Home = () => {
+  const { t } = useTranslation();
   const catalogue = useSelector((state) => state.catalogue.catalogue);
   return (
     <div className="home page">
-      <CatalogueList list={catalogue} />
+      <div className="page__title">{t("titles.home")}</div>
+      <List name="catalogue" list={catalogue} />
     </div>
   );
 };

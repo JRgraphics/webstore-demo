@@ -18,4 +18,21 @@ $width: 42px;
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 0 20px;
+  &__cart-title {
+    font-family: $fontTangerine;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-right: 20px;
+  }
+  &__logo {
+    font-family: "Pacifico", cursive;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  &__title {
+    font-family: $fontTangerine;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0 20px;
+  }
 }

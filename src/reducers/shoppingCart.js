@@ -17,7 +17,7 @@ const favouriteReducer = (state = initialState, action) => {
       amounts[item.id] = amount;
       return {
         ...state,
-        shoppingCart: !!state.shoppingCart.find((el) => el === item)
+        shoppingCart: !!state.shoppingCart.find((el) => el.id === item.id)
           ? [...state.shoppingCart]
           : [...state.shoppingCart, item],
         amounts: amounts,
@@ -25,7 +25,10 @@ const favouriteReducer = (state = initialState, action) => {
     case MODIFY_CART:
       return {
         ...state,
-        favourites: action.payload,
+        amounts: {
+          ...state.amounts,
+          [action.item.id]: action.amount,
+        },
       };
     case DELETE_FROM_CART:
       const amountObject = { ...state.amounts };

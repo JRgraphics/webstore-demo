@@ -1,3 +1,7 @@
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
 .flex {
   display: flex;
   &--center {
@@ -8,7 +12,19 @@
 }
 
 .switch-wrapper {
-  height: calc(100% - $headerHeight);
+  height: calc(100% - 150px);
   position: relative;
   width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
