@@ -56,11 +56,14 @@ const Header = () => {
             <div className="flex--center">
               <div className="header__cart-title">
                 {getTotalAmount(Object.values(amounts)) === 0
-                  ? "No"
+                  ? t("labels.no")
                   : getTotalAmount(Object.values(amounts))}
-                {" item" +
-                  (getTotalAmount(Object.values(amounts)) !== 1 ? "s" : "")}
-                {" in the cart"}
+                {" " +
+                  t("labels.item").toLowerCase() +
+                  (getTotalAmount(Object.values(amounts)) !== 1
+                    ? t("labels.plural")
+                    : "")}
+                {" " + t("labels.inTheCart")}
               </div>
               <div className="icon__container--shopping-cart flex--center">
                 <CartIcon className={"icon__shopping-cart " + cartAnimation} />

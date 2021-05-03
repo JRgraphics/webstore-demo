@@ -10,6 +10,7 @@ const Input = ({
   onDelete,
   defaultValue,
 }) => {
+  // Render input components based on the name property
   const renderInput = () => {
     switch (name) {
       case "number-toggle":
@@ -24,7 +25,7 @@ const Input = ({
         );
 
       default:
-        return <input type="text" />;
+        return <input type={type} />;
     }
   };
   return renderInput();

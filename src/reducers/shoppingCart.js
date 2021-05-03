@@ -1,4 +1,9 @@
-import { ADD_TO_CART, DELETE_FROM_CART, MODIFY_CART } from "../actions";
+import {
+  ADD_TO_CART,
+  DELETE_FROM_CART,
+  EMPTY_CART,
+  MODIFY_CART,
+} from "../actions";
 
 const initialState = {
   shoppingCart: [],
@@ -22,14 +27,6 @@ const favouriteReducer = (state = initialState, action) => {
           : [...state.shoppingCart, item],
         amounts: amounts,
       };
-    case MODIFY_CART:
-      return {
-        ...state,
-        amounts: {
-          ...state.amounts,
-          [action.item.id]: action.amount,
-        },
-      };
     case DELETE_FROM_CART:
       const amountObject = { ...state.amounts };
       delete amountObject[action.item.id];
@@ -40,6 +37,21 @@ const favouriteReducer = (state = initialState, action) => {
         ),
         amounts: amountObject,
       };
+    case EMPTY_CART:
+      return {
+        ...state,
+        shoppingCart: [],
+        amounts: {},
+      };
+    case MODIFY_CART:
+      return {
+        ...state,
+        amounts: {
+          ...state.amounts,
+          [action.item.id]: action.amount,
+        },
+      };
+
     default:
       return state;
   }

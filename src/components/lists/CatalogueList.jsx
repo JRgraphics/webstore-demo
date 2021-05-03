@@ -20,7 +20,7 @@ const CatalogueList = ({ list = [] }) => {
   );
 };
 
-export const CatalogueListItem = ({ item, index, isCart }) => {
+export const CatalogueListItem = ({ item }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ export const CatalogueListItem = ({ item, index, isCart }) => {
 
         <Button
           buttonClassName={"button__add-to-cart"}
-          buttonContent={"ADD TO CART"}
+          buttonContent={t("labels.addToCart").toUpperCase()}
           onClick={() => dispatch(addToCart(item))}
         />
       </div>

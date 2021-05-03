@@ -1,4 +1,9 @@
 .shopping-cart {
+  &__footer {
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  }
   &__item {
     align-items: center;
     justify-content: space-between;
@@ -27,6 +32,9 @@
 
 @media screen and (max-width: 650px) {
   .shopping-cart {
+    &__footer {
+      padding: 30px 20px;
+    }
     &__item {
       flex-wrap: wrap;
       padding: 10px;

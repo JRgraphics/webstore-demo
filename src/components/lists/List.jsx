@@ -5,6 +5,7 @@ import CatalogueList from "./CatalogueList";
 import ShoppingCartList from "./ShoppingCartList";
 
 const List = ({ name, list = [] }) => {
+  // Show appropriate list based on the passed name property
   const renderList = () => {
     switch (name) {
       case "catalogue":

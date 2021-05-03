@@ -22,7 +22,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Suspense fallback={<Loading />}>
         <Div100vh>
-          <PersistGate persistor={persistor}>
+          <PersistGate loading={<Loading />} persistor={persistor}>
             <App />
           </PersistGate>
         </Div100vh>

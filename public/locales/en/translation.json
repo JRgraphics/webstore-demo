@@ -12,6 +12,15 @@
     }
   },
   "header": { "title": "The most definitive shape store in the world" },
+  "labels": {
+    "addToCart": "Add to cart",
+    "checkout": "Checkout",
+    "empty": "Empty",
+    "inTheCart": "in the cart",
+    "item": "Item",
+    "no": "No",
+    "plural": "s"
+  },
   "titles": {
     "home": "Catalogue",
     "shoppingCart": "Shopping cart"
