@@ -74,6 +74,7 @@ export const ShoppingCartListItem = ({ item, index }) => {
           onClick={handleOnDelete}
         />
       </div>
+      <div className="border-bottom"></div>
     </li>
   );
 };

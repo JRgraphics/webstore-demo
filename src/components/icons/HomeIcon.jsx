@@ -10,7 +10,7 @@ const HomeIcon = ({ color = "#ffffff", className = "" }) => {
       <title>Home</title>
       <path
         d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
-        fill="none"
+        fill={color}
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -18,7 +18,7 @@ const HomeIcon = ({ color = "#ffffff", className = "" }) => {
       />
       <path
         d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69"
-        fill="none"
+        fill={color}
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"

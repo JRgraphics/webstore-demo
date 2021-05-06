@@ -2,6 +2,14 @@
   font-family: "Roboto", sans-serif;
 }
 
+.border-bottom {
+  background-color: $black;
+  height: 2px;
+  margin: 40px auto 20px auto;
+  padding: 0 20%;
+  width: 100%;
+}
+
 .flex {
   display: flex;
   &--center {

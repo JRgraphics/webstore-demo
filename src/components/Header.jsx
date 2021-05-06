@@ -51,7 +51,7 @@ const Header = () => {
 
       <Link to="/shopping-cart">
         <Button
-          buttonClassName={"button--transparent"}
+          buttonClassName={"button--transparent button__shopping-cart"}
           buttonContent={
             <div className="flex--center">
               <div className="header__cart-title">

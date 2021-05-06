@@ -14,6 +14,7 @@ const NumberToggle = ({
   const [value, setValue] = useState(defaultValue);
   const [lastNumericValue, setLastNumericValue] = useState(defaultValue);
 
+    // Set value and trigger onChange property if the input field is not empty
   const handleChange = (number) => {
     setValue(parseInt(number));
     if (!!number) {
@@ -21,7 +22,8 @@ const NumberToggle = ({
       onChange(parseInt(number));
     }
   };
-
+  // Check input field's value on blur event, if the field is empty, set the value to the last appropriate numeric value
+  // If the value is 0, trigger onDelete proparty
   const handleBlur = () => {
     if (!!!value) {
       setValue(lastNumericValue);

@@ -10,6 +10,9 @@ import ProceedIcon from "../icons/ProceedIcon";
 import { emptyCart } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 
+// Router
+import { Link } from "react-router-dom";
+
 // Translation
 import { useTranslation } from "react-i18next";
 
@@ -36,6 +39,15 @@ const ShoppingCart = () => {
   return (
     <div className="shopping-cart page">
       <div className="shopping-cart__header flex">
+        <Link to="/">
+          <Button
+            buttonClassName="button--transparent header__logo flex--center"
+            buttonContent={
+              <ProceedIcon className="icon__home icon__return" color={"#000"} />
+            }
+            onClick={() => {}}
+          />
+        </Link>
         <div className="page__title">{t("titles.shoppingCart")}</div>
       </div>
       <List name={"shopping-cart"} list={shoppingCart} />

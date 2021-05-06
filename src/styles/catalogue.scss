@@ -17,6 +17,9 @@
       &__description {
         color: darkgray;
         font-weight: 600;
+        line-height: 1.4rem;
+        max-height: calc(1.4 * 4rem);
+        overflow-y: hidden;
       }
       &__image {
         height: 100px;
@@ -30,6 +33,23 @@
       &__price {
         font-size: 1.6rem;
         text-align: right;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .catalogue {
+    &__item {
+      flex-wrap: wrap;
+      .item {
+        &__column {
+          display: block;
+          flex: auto;
+        }
+        &__image {
+          width: 100%;
+        }
       }
     }
   }

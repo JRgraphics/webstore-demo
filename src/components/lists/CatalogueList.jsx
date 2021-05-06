@@ -20,7 +20,7 @@ const CatalogueList = ({ list = [] }) => {
   );
 };
 
-export const CatalogueListItem = ({ item }) => {
+export const CatalogueListItem = ({ item, index }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
@@ -44,6 +44,7 @@ export const CatalogueListItem = ({ item }) => {
           onClick={() => dispatch(addToCart(item))}
         />
       </div>
+      <div className="border-bottom"></div>
     </li>
   );
 };

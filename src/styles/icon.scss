@@ -20,6 +20,9 @@
     height: 25px;
     width: 25px;
   }
+  &__return {
+    transform: rotateY(180deg);
+  }
   &__shopping-cart {
     height: 70%;
     width: 70%;

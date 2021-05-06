@@ -47,3 +47,11 @@ button {
     width: 38px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .button {
+    &__shopping-cart {
+      margin-top: 10px;
+    }
+  }
+}
