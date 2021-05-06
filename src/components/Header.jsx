@@ -16,7 +16,9 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const { t } = useTranslation();
 
+  // State hooks
   const [cartAnimation, setCartAnimation] = useState("");
+
   const amounts = useSelector((state) => state.shoppingCart.amounts);
 
   // Returns the total amount of items in the shopping cart
@@ -26,6 +28,23 @@ const Header = () => {
       total += value;
     });
     return total;
+  };
+
+  // Setting the cart button's title conditionally with the translation, based on the amount of items in the cart
+  const getCartLabel = () => {
+    return (
+      <>
+        {getTotalAmount(Object.values(amounts)) === 0
+          ? t("labels.no")
+          : getTotalAmount(Object.values(amounts))}
+        {" " +
+          t("labels.item").toLowerCase() +
+          (getTotalAmount(Object.values(amounts)) !== 1
+            ? t("labels.plural")
+            : "")}
+        {" " + t("labels.inTheCart")}
+      </>
+    );
   };
 
   // Triggers an animation on shopping cart button to indicate shopping cart changes to the user
@@ -54,17 +73,7 @@ const Header = () => {
           buttonClassName={"button--transparent button__shopping-cart"}
           buttonContent={
             <div className="flex--center">
-              <div className="header__cart-title">
-                {getTotalAmount(Object.values(amounts)) === 0
-                  ? t("labels.no")
-                  : getTotalAmount(Object.values(amounts))}
-                {" " +
-                  t("labels.item").toLowerCase() +
-                  (getTotalAmount(Object.values(amounts)) !== 1
-                    ? t("labels.plural")
-                    : "")}
-                {" " + t("labels.inTheCart")}
-              </div>
+              <div className="header__cart-title">{getCartLabel()}</div>
               <div className="icon__container--shopping-cart flex--center">
                 <CartIcon className={"icon__shopping-cart " + cartAnimation} />
               </div>

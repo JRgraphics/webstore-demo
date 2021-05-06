@@ -13,6 +13,7 @@ import { deleteFromCart, modifyCart } from "../../actions";
 import { useTranslation } from "react-i18next";
 
 const ShoppingCartList = ({ list = [] }) => {
+  // Lists all the items in the cart
   return (
     <ul className="shopping-cart-list list">
       {list.map((item, index) => (
@@ -26,6 +27,7 @@ export const ShoppingCartListItem = ({ item, index }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
+  // State hooks
   const [priceFader, setPriceFader] = useState("");
 
   const amounts = useSelector((state) => state.shoppingCart.amounts);

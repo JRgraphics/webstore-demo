@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { addToCart } from "../../actions";
 
 const CatalogueList = ({ list = [] }) => {
+  // Shows all the items in the catalogue
   return (
     <ul className="catalogue-list list">
       {list.map((item, index) => (

@@ -5,6 +5,7 @@ import {
   MODIFY_CART,
 } from "./types";
 
+// Adds item to the cart
 export const addToCart = (item) => {
   return {
     type: ADD_TO_CART,
@@ -12,6 +13,7 @@ export const addToCart = (item) => {
   };
 };
 
+// Deletes all the instances of an item from the cart
 export const deleteFromCart = (item, index) => {
   return {
     type: DELETE_FROM_CART,
@@ -20,12 +22,14 @@ export const deleteFromCart = (item, index) => {
   };
 };
 
+// Removes all the items and their instances from the cart
 export const emptyCart = () => {
   return {
     type: EMPTY_CART,
   };
 };
 
+// Modifies the amount of a specific item in the cart
 export const modifyCart = (item, amount) => {
   return {
     type: MODIFY_CART,

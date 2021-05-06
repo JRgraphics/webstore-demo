@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Webstore Demo
+
+## This is a webstore demo application, where the user can select items from the catalogue to their shopping cart. They can edit the content of their shopping cart and proceed to checkout or empty the cart.
+
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

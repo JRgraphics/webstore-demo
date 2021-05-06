@@ -11,10 +11,12 @@ const NumberToggle = ({
   onDelete,
   defaultValue = 0,
 }) => {
-  const [value, setValue] = useState(defaultValue);
+  // State hooks
+  const [value, setValue] = useState(defaultValue); // Current value of the input
+  // The last number value of the input set by handleChange function
   const [lastNumericValue, setLastNumericValue] = useState(defaultValue);
 
-    // Set value and trigger onChange property if the input field is not empty
+  // Set value and trigger onChange property if the input field is not empty
   const handleChange = (number) => {
     setValue(parseInt(number));
     if (!!number) {
